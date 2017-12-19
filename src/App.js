@@ -14,11 +14,11 @@ class App extends Component {
   removeChar = id => {
     // filter characters array
     const characters = this.state.characters.filter(character => character.id !== id);
-    // set this.state.friends equal to new characters array
+    // set this.state.characters equal to new characters array
     this.setState({characters});
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // map this.state.characters then render a CharacterCard for each character object
   render() {
     return (
       <Wrapper>
