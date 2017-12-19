@@ -11,9 +11,16 @@ class App extends Component {
     characters
   };
 
-  removeChar = id => {
+  counter = () => {
+      this.setState({count: this.state.count + 1});
+  };
+
+  shuffleChar = id => {
     // filter characters array
-    const characters = this.state.characters.filter(character => character.id !== id);
+    // const characters = this.state.characters.filter(character => character.id !== id);
+
+    // shuffle array
+    const characters = this.state.characters.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
     // set this.state.characters equal to new characters array
     this.setState({characters});
   };
@@ -25,7 +32,7 @@ class App extends Component {
         <Title>Characters List</Title>
         {this.state.characters.map(character => (
           <CharacterCard
-            removeChar={this.removeChar}
+            shuffleChar={this.shuffleChar}
             id={character.id}
             key={character.id}
             image={character.image}
