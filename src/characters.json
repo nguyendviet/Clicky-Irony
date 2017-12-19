@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Stan Marsh",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a7/StanMarsh.png"
+  },
+  {
+    "id": 2,
+    "name": "Kyle Broflovski",
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/25/KyleBroflovski.png"
+  },
+  {
+    "id": 3,
+    "name": "Eric Cartman",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png"
+  },
+  {
+    "id": 4,
+    "name": "Kenny McCormick",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6f/KennyMcCormick.png"
+  },
+  {
+    "id": 5,
+    "name": "Butters Stotch",
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/06/ButtersStotch.png"
+  },
+  {
+    "id": 6,
+    "name": "Wendy Testaburger",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/ab/Wendy_South_Park.png"
+  },
+  {
+    "id": 7,
+    "name": "Tweek Tweak",
+    "image": "https://vignette.wikia.nocookie.net/southpark/images/9/9d/Tweek_pic.png/revision/latest?cb=20160402115548"
+  },
+  {
+    "id": 8,
+    "name": "Bebe Stevens",
+    "image": "https://vignette.wikia.nocookie.net/southpark/images/2/2b/2-436.png/revision/latest?cb=20160402112834"
+  },
+  {
+    "id": 9,
+    "name": "Bradley Biggle",
+    "image": "https://vignette.wikia.nocookie.net/southpark/images/f/ff/Bradley_biggle_pic.png/revision/latest?cb=20170322005214"
+  },
+  {
+    "id": 10,
+    "name": "Clyde Donovan",
+    "image": "https://vignette.wikia.nocookie.net/southpark/images/9/9e/Clyde_d.png/revision/latest?cb=20170322004515"
+  },
+  {
+    "id": 11,
+    "name": "Craig Tucker",
+    "image": "https://vignette.wikia.nocookie.net/southpark/images/c/c2/Craig-tucker.png/revision/latest?cb=20160402121203"
+  },
+  {
+    "id": 12,
+    "name": "Dougie",
+    "image": "https://vignette.wikia.nocookie.net/southpark/images/4/49/Dougie.png/revision/latest?cb=20171009235725"
+  }
+]
