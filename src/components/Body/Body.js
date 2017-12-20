@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import NavBar from '../NavBar';
 import CharacterCard from '../CharacterCard';
-import Counter from '../Counter';
 import Wrapper from '../Wrapper';
-import Title from '../Title';
 import characters from '../../characters.json';
 import './Body.css';
 
