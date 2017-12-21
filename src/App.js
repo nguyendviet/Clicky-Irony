@@ -10,7 +10,9 @@ class App extends Component {
     state = {
         characters,
         count: 0,
-        topScore: 0
+        topScore: 0,
+        clicked: [],
+        message: ''
     };
 
     // handleIncrement increases this.state.count by 1
@@ -18,12 +20,32 @@ class App extends Component {
         this.setState({count: this.state.count + 1, topScore: this.state.count + 1});
     };
 
+    // record clicked character
+    clickedChar = id => {
+        // add id of character to clicked array
+        const clicked = [...this.state.clicked, id];
+        this.setState({clicked});
+    };
+
     clickChar = id => {
-        // shuffle array
-        const characters = this.state.characters.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
-        // set this.state.characters equal to new characters array
-        this.setState({characters});
-        this.handleIncrement();
+        console.log(`state: ${this.state.clicked}`);
+
+        // if clicked array already has the chracter id
+        if (this.state.clicked.includes(id)) {
+            const message = `Ay! You've got the wrong one!`;
+            this.setState({message: message});
+        }
+        // if character id is not in clicked array
+        else {
+            const message = `Sweet, dude!`;
+            this.setState({message: message});
+            // shuffle array
+            const characters = this.state.characters.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
+            // set this.state.characters equal to new characters array
+            this.setState({characters});
+            this.handleIncrement();
+            this.clickedChar(id);
+        }
     };
 
     // render page with navbar and each character
@@ -31,6 +53,7 @@ class App extends Component {
         return ([
             <div key={0}>
                 <NavBar
+                    message={this.state.message}
                     count={this.state.count}
                     topScore={this.state.topScore}
                 />
