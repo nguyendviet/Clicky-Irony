@@ -17,7 +17,20 @@ class App extends Component {
 
     // handleIncrement increases this.state.count by 1
     handleIncrement() {
-        this.setState({count: this.state.count + 1, topScore: this.state.count + 1});
+        this.setState({count: this.state.count + 1});
+
+        // check if breaks top score
+        if (this.state.count >= this.state.topScore) {
+            this.setState({
+                topScore: this.state.count + 1
+            });
+        }
+    };
+
+    shuffleChar() {
+        const characters = this.state.characters.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
+        // set this.state.characters equal to new characters array
+        this.setState({characters});
     };
 
     // record clicked character
@@ -28,21 +41,22 @@ class App extends Component {
     };
 
     clickChar = id => {
-        console.log(`state: ${this.state.clicked}`);
+        // shuffle array
+        this.shuffleChar();
 
         // if clicked array already has the chracter id
         if (this.state.clicked.includes(id)) {
             const message = `Ay! You've got the wrong one!`;
-            this.setState({message: message});
+            this.setState({
+                message: message, 
+                count: 0, 
+                clicked: []
+            });
         }
         // if character id is not in clicked array
         else {
             const message = `Sweet, dude!`;
             this.setState({message: message});
-            // shuffle array
-            const characters = this.state.characters.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
-            // set this.state.characters equal to new characters array
-            this.setState({characters});
             this.handleIncrement();
             this.clickedChar(id);
         }

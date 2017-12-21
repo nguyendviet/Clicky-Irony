@@ -2,7 +2,7 @@ import React from 'react';
 import './NavBar.css';
 
 const NavBar = props => (
-    <ul className="nav justify-content-center fixed-top">
+    <ul className="nav justify-content-center .align-middle fixed-top">
         <li className="nav-item">
             <a href="/"><b>Clicky Game</b></a>
         </li>
