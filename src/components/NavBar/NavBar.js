@@ -7,10 +7,10 @@ const NavBar = props => (
             <a href="/"><b>Clicky Game</b></a>
         </li>
         <li className="nav-item">
-            <p>Score: {props.count}</p>
+            <p>Click an image to begin</p>
         </li>
         <li className="nav-item">
-            <p>Top Score: {props.count}</p>
+            <p>Score: {props.count} | Top Score: {props.count}</p>
         </li>
     </ul>
 );

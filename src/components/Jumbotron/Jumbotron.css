@@ -1,4 +1,6 @@
 .jumbotron {
     margin-bottom: 0px;
-    padding-top: 4em;
+    padding-top: 10%;
+    background-image: url(./christmas-dark.png);
+    color: white;
 }

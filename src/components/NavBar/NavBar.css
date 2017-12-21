@@ -1,9 +1,8 @@
 .nav {
     color: white;
-    vertical-align: center;
-    font-size: 1em;
+    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
     line-height: 3em;
-    background-color: blue;
+    background-color: #6CADDC;
     box-shadow: 0 10px 20px rgba(0,0,0,.25);
 }
 
