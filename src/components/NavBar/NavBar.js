@@ -10,7 +10,7 @@ const NavBar = props => (
             <p>Click an image to begin</p>
         </li>
         <li className="nav-item">
-            <p>Score: {props.count} | Top Score: {props.count}</p>
+            <p>Score: {props.count} | Top Score: {props.topScore}</p>
         </li>
     </ul>
 );
