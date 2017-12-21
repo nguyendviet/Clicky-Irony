@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import NavBar from './components/NavBar';
+import Jumbotron from './components/Jumbotron';
 import CharacterCard from './components/CharacterCard';
 import Wrapper from './components/Wrapper';
-import NavBar from './components/NavBar';
 import characters from './characters.json';
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
         this.handleIncrement();
     };
 
-  // map this.state.characters then render a CharacterCard for each character object
+    // render page with navbar and each character
     render() {
         return ([
             <div key={0}>
@@ -33,6 +34,9 @@ class App extends Component {
                 />
             </div>,
             <div key={1}>
+                <Jumbotron/>
+            </div>,
+            <div key={2}>
                 <Wrapper>
                     {this.state.characters.map(character => (
                     <CharacterCard
